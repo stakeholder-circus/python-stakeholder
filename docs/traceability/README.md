@@ -1,5 +1,19 @@
-# Rust Traceability
+# Traceability
 
-- Rust is the source-of-truth side of the rewrite program.
-- Behavioral changes here must be mirrored into `stakeholder-core` traceability, docs, and downstream packets.
-- Downstream repos should cite Rust file paths and the corresponding `stakeholder-core` rows when porting behavior.
+This repo is in follower-foundation state.
+
+## Landed evidence
+- Full 2026+ family registry is enumerated in the runtime foundation.
+- Scheduler behavior follows the current Java parity anchor for activity count, eligibility, alert injection, team injection, and security flavor overlays.
+- Dedicated renderer depth is implemented for:
+  - `code-analyzer`
+  - `data-processing`
+  - `jargon`
+  - `metrics`
+  - `network-activity`
+  - `system-monitoring`
+  - `agent-workflows`
+- All remaining families stay on grouped fallback renderers until later parity tranches land.
+
+## Deferred traceability depth
+- Fine-grained per-family source rows remain downstream of the Java depth tranche.

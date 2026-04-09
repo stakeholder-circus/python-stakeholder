@@ -1,16 +1,13 @@
-# Rust Example Outputs
+# Example Outputs
 
-## Security
-```bash
-cargo run -- --dev-type security --jargon high --complexity extreme --alerts --seed 42
-```
+## Deterministic JSON smoke
+- Command: `stakeholder --seed 2 --output-format json`
+- Dedicated family evidence: `code-analyzer`, `data-processing`, `jargon`, `metrics`, `network-activity`, `system-monitoring`
 
-## Blockchain
-```bash
-cargo run -- --dev-type blockchain --framework "rollup-mcp-gateway" --output-format json --seed 7
-```
+## Deterministic JSON team smoke
+- Command: `stakeholder --seed 1 --output-format json --dev-type security --team`
+- Dedicated family evidence: `agent-workflows`
 
-## Healthcare + charging + quantum crossover
-```bash
-cargo run -- --project "hospital-ocpp-quantum-control" --framework "mcp grpc" --jargon extreme --team --trace --seed 11
-```
+## Experimental fail-fast
+- Command: `stakeholder --experimental-provider openai-compatible`
+- Result: explicit non-zero fail-fast because provider runtime is intentionally not implemented in this repo.

@@ -1,9 +1,11 @@
-# Rust Docker
+# Docker
 
-## Build and test
-- `docker build -t rust-stakeholder .`
-- `docker run --rm rust-stakeholder --list-values`
+The repo uses a Python 3.12 slim image with editable install, build, lint, and tests executed in the image.
 
-## Rationale
-- The image compiles and tests the Rust baseline before packaging the runtime binary.
-- Docker is the reproducible Linux gate; host and CI matrices still cover native OS behavior.
+## Commands
+- `docker build -t python-stakeholder .`
+- `docker run --rm python-stakeholder --list-values`
+
+## CI intent
+- Build the package artifact with `python -m build`.
+- Enforce `ruff` and `mypy` in the container build stage.

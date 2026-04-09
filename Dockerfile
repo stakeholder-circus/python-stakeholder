@@ -1,11 +1,14 @@
-FROM rust:1-bookworm AS build
-WORKDIR /workspace
-COPY Cargo.toml Cargo.lock ./
-COPY src ./src
-RUN cargo test && cargo build --release
-
-FROM debian:bookworm-slim
+FROM python:3.12-slim
 WORKDIR /app
-COPY --from=build /workspace/target/release/rust-stakeholder /usr/local/bin/rust-stakeholder
-ENTRYPOINT ["rust-stakeholder"]
-CMD ["--list-values"]
+COPY pyproject.toml ./
+COPY README.md ./
+COPY src ./src
+COPY tests ./tests
+RUN pip install --no-cache-dir build
+RUN pip install --no-cache-dir -e .[dev,test]
+RUN python -m build
+RUN ruff format --check src tests
+RUN ruff check src tests
+RUN mypy src
+RUN pytest
+ENTRYPOINT ["python", "-m", "stakeholder"]
