@@ -13,7 +13,12 @@ This repo is in follower-foundation state.
   - `network-activity`
   - `system-monitoring`
   - `agent-workflows`
+  - `platform-engineering`
+  - `observability-ai-runtime`
+  - `delivery-preview-ops`
+  - `supply-chain-security`
 - All remaining families stay on grouped fallback renderers until later parity tranches land.
+- Dedicated-family metadata now carries Rust generator anchors, Java renderer anchors, and the shared `stakeholder-core` contract path.
 
 ## Deferred traceability depth
-- Fine-grained per-family source rows remain downstream of the Java depth tranche.
+- Fine-grained rows beyond the full modern-core tranche remain downstream of later follower tranches.

@@ -2,7 +2,7 @@
 > This repository is part of a Codex-assisted rewrite experiment. All changes are manually reviewed, a human remains in the loop, and missing behavior is tracked explicitly rather than hidden. The project exists for fun, research, language learning, AI agent workflow/planning, interop experiments, and code review testing.
 # python-stakeholder
 
-Python widened classic-six follower for the stakeholder rewrite.
+Python follower implementation through the modern-core wave for the stakeholder rewrite.
 
 ## Implemented surface
 - Typed config model and full 2026+ family registry.
@@ -16,6 +16,10 @@ Python widened classic-six follower for the stakeholder rewrite.
   - `network-activity`
   - `system-monitoring`
   - `agent-workflows`
+  - `platform-engineering`
+  - `observability-ai-runtime`
+  - `delivery-preview-ops`
+  - `supply-chain-security`
 - Grouped fallback renderers for the remaining families.
 - Normalized JSON event output.
 - Explicit fail-fast handling for experimental provider flags.
