@@ -9,6 +9,6 @@
 - Experimental provider flags are parsed and fail fast explicitly.
 
 ## Remaining gaps
-- Dedicated family-depth parity beyond the widened classic-six plus the full modern-core tranche is still pending.
-- Experimental provider runtime remains intentionally unimplemented in this repo.
+- Dedicated family-depth parity beyond the widened classic-six plus the full modern-core tranche is still open for the later live-provider expansion phase.
+- Experimental provider runtime is not yet implemented in the current lane.
 - Dedicated-family metadata now points back to Rust generator files, Java renderer anchors, and the shared `stakeholder-core` contract docs.
