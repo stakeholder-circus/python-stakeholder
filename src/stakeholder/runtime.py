@@ -237,7 +237,10 @@ def text_lines(config: SessionConfig) -> list[str]:
     lines: list[str] = []
     for event in run_session(config):
         if event.eventType == "activity":
-            lines.append(f"[{FAMILIES_BY_CLI[event.context['family']].title}] {event.message}")
+            family = event.context["family"]
+            if not isinstance(family, str):
+                raise TypeError("activity event family must be a string")
+            lines.append(f"[{FAMILIES_BY_CLI[family].title}] {event.message}")
         elif event.eventType == "trace":
             lines.append(f"trace: {event.message}")
     lines.append("session terminated (deterministic-pass)")
