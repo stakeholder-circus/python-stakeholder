@@ -6,7 +6,7 @@
 
 ## Deterministic JSON team smoke
 - Command: `stakeholder --seed 1 --output-format json --dev-type security --team`
-- Dedicated family evidence: `agent-workflows`
+- Dedicated family evidence: `agent-workflows`, `platform-engineering`, `observability-ai-runtime`, `delivery-preview-ops`, `supply-chain-security`
 
 ## Experimental fail-fast
 - Command: `stakeholder --experimental-provider openai-compatible`
