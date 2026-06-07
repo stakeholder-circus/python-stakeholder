@@ -25,7 +25,9 @@ FAMILY_SPECS: Final[tuple[FamilySpec, ...]] = (
     FamilySpec("supply-chain-security", "Supply-chain security", None, "modern-core"),
     FamilySpec("observability-ai-runtime", "Observability AI runtime", None, "modern-core"),
     FamilySpec("delivery-preview-ops", "Delivery preview ops", None, "modern-core"),
-    FamilySpec("evaluation-and-guardrails", "Evaluation and guardrails", "responses-api", "ai-governance"),
+    FamilySpec(
+        "evaluation-and-guardrails", "Evaluation and guardrails", "responses-api", "ai-governance"
+    ),
     FamilySpec("knowledge-retrieval", "Knowledge retrieval", "responses-api", "ai-governance"),
     FamilySpec("edge-client-runtime", "Edge client runtime", "webtransport", "health-protocol"),
     FamilySpec("identity-and-trust", "Identity and trust", None, "security-blockchain"),
@@ -43,22 +45,37 @@ FAMILY_SPECS: Final[tuple[FamilySpec, ...]] = (
     FamilySpec("compiler-maintainer", "Compiler maintainer", "openqasm3", "overlay-quantum"),
     FamilySpec("interop-adapter-engineer", "Interop adapter engineer", "qir", "overlay-quantum"),
     FamilySpec("preflight-capacity-planner", "Preflight capacity planner", None, "overlay-quantum"),
-    FamilySpec("simulator-performance-engineer", "Simulator performance engineer", "openqasm3", "overlay-quantum"),
+    FamilySpec(
+        "simulator-performance-engineer",
+        "Simulator performance engineer",
+        "openqasm3",
+        "overlay-quantum",
+    ),
     FamilySpec("fhir-profile-generator", "FHIR profile generator", "fhir-r4", "health-protocol"),
     FamilySpec("smart-launch-oauth", "SMART launch OAuth", "smart-launch", "health-protocol"),
-    FamilySpec("bulk-fhir-population-ops", "Bulk FHIR population ops", "bulk-fhir", "health-protocol"),
+    FamilySpec(
+        "bulk-fhir-population-ops", "Bulk FHIR population ops", "bulk-fhir", "health-protocol"
+    ),
     FamilySpec("hl7v2-feed-ops", "HL7 v2 feed ops", "hl7v2", "health-protocol"),
-    FamilySpec("clinical-workflow-events", "Clinical workflow events", "fhir-r4", "health-protocol"),
+    FamilySpec(
+        "clinical-workflow-events", "Clinical workflow events", "fhir-r4", "health-protocol"
+    ),
     FamilySpec("dicomweb-imaging-ops", "DICOMweb imaging ops", "dicomweb", "health-protocol"),
-    FamilySpec("openehr-semantic-record-ops", "openEHR semantic record ops", "openehr", "health-protocol"),
-    FamilySpec("device-telemetry-clinical", "Device telemetry clinical", "ihe-device", "health-protocol"),
+    FamilySpec(
+        "openehr-semantic-record-ops", "openEHR semantic record ops", "openehr", "health-protocol"
+    ),
+    FamilySpec(
+        "device-telemetry-clinical", "Device telemetry clinical", "ihe-device", "health-protocol"
+    ),
     FamilySpec("emr-vendor-adapter", "EMR vendor adapter", "epic-fhir", "health-protocol"),
     FamilySpec("ocpp-chargepoint-ops", "OCPP chargepoint ops", "ocpp-2.x", "health-protocol"),
     FamilySpec("ocpi-roaming-ops", "OCPI roaming ops", "ocpi-2.x", "health-protocol"),
     FamilySpec("mcp-a2a-ops", "MCP and A2A ops", "mcp", "health-protocol"),
     FamilySpec("streaming-bus-ops", "Streaming bus ops", "kafka", "health-protocol"),
     FamilySpec("service-mesh-rpc-ops", "Service mesh RPC ops", "grpc", "health-protocol"),
-    FamilySpec("multilingual-security-packs", "Multilingual security packs", None, "overlay-quantum"),
+    FamilySpec(
+        "multilingual-security-packs", "Multilingual security packs", None, "overlay-quantum"
+    ),
     FamilySpec("security-persona-packs", "Security persona packs", None, "overlay-quantum"),
 )
 
