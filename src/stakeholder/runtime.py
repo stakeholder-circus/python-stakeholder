@@ -1,22 +1,21 @@
 from __future__ import annotations
 
+import random
 from dataclasses import asdict, dataclass
 from datetime import UTC, datetime, timedelta
-import random
 from typing import Final
 
 from .catalog import (
     ALERT_FAMILIES,
     CLASSIC_FAMILIES,
-    FAMILY_SPECS,
     FAMILIES_BY_CLI,
+    FAMILY_SPECS,
     POLICY_FAMILIES,
     SECURITY_FAMILIES,
     TEAM_FAMILIES,
     FamilySpec,
 )
 from .config import Complexity, DevelopmentType, JargonLevel, SessionConfig
-
 
 MULTILINGUAL_SECURITY: Final[tuple[str, ...]] = (
     "english",
@@ -636,9 +635,10 @@ def planned_activities(complexity: Complexity) -> int:
 
 
 def new_random(seed: str | None) -> random.Random:
+    # Content selection is deterministic or variable, never security-sensitive.
     if seed is None:
-        return random.Random()
-    return random.Random(stable_seed(seed))
+        return random.Random()  # nosec B311
+    return random.Random(stable_seed(seed))  # nosec B311
 
 
 def stable_seed(value: str) -> int:

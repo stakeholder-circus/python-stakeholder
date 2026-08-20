@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from io import StringIO
 import json
+from io import StringIO
 
 from stakeholder.cli import run
 from stakeholder.config import JargonLevel, SessionConfig
