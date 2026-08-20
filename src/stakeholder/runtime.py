@@ -17,7 +17,6 @@ from .catalog import (
 )
 from .config import Complexity, DevelopmentType, JargonLevel, SessionConfig
 
-
 MULTILINGUAL_SECURITY: Final[tuple[str, ...]] = (
     "english",
     "chinese",
