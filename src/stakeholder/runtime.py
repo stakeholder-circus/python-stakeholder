@@ -636,9 +636,10 @@ def planned_activities(complexity: Complexity) -> int:
 
 
 def new_random(seed: str | None) -> random.Random:
+    # Content selection is deterministic or variable, never security-sensitive.
     if seed is None:
-        return random.Random()
-    return random.Random(stable_seed(seed))
+        return random.Random()  # nosec B311
+    return random.Random(stable_seed(seed))  # nosec B311
 
 
 def stable_seed(value: str) -> int:
