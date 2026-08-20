@@ -1,15 +1,15 @@
 from __future__ import annotations
 
+import random
 from dataclasses import asdict, dataclass
 from datetime import UTC, datetime, timedelta
-import random
 from typing import Final
 
 from .catalog import (
     ALERT_FAMILIES,
     CLASSIC_FAMILIES,
-    FAMILY_SPECS,
     FAMILIES_BY_CLI,
+    FAMILY_SPECS,
     POLICY_FAMILIES,
     SECURITY_FAMILIES,
     TEAM_FAMILIES,

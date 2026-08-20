@@ -3,7 +3,8 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from typing import Sequence, TextIO
+from collections.abc import Sequence
+from typing import TextIO
 
 from .catalog import list_values
 from .config import Complexity, DevelopmentType, JargonLevel, OutputFormat, SessionConfig
